@@ -4,7 +4,6 @@
 
 <head>
   <style>
-    <!-- define CSS rules -->
   </style>
 </head>
 
@@ -17,12 +16,9 @@
 
   <script>
     // define the dimensions and margins for the graph
-    var margin = 50,
-    width = 600 - margin,
+    var margin = 100
+    width = 800 - margin,
     height = 500 - margin;
-    /*var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 600 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;*/
 
     // define function to parse time in years format
 
@@ -35,40 +31,49 @@
     // append svg element to the body of the page
     // set dimensions and position of the svg element
     var svg = d3.select("body").append("svg")
-        .attr("width", 600)
-        .attr("height", 600);
-    var g = svg.append("g").attr("transform", "translate(100 , 100)");
-
+        .attr("width", 800)
+        .attr("height", 500);
+    var g = svg.append("g").attr("transform", "translate(75 , 50)");
 
     // Get the data
-	var pathToCsv = "q3.csv";		// path to csv
-	
+	var pathToCsv = "q3.csv";
+
     d3.dsv(",", pathToCsv, function (d) {
       return {
         year: +d.year,
-        running_total: d.running_total
+        running_total: +d.running_total
       }
     }).then(function (data) {
-      console.log(data); // you should see the data in your browser's developer tools console 
-      
-      /* Create bar plot using data from csv */
-
-      // set the domains of X and Y scales based on data
-      //x.domain(data.map(function(d){return new Date(d.year)}));
-      x.domain(d3.extent(data, (d => new Date(parseInt(d.year, 1)))));
+      console.log(data);
+      x.domain(data.map(function(d){return d.year}));
       y.domain([0, d3.max(data.map(function(d){return d.running_total}))]);
-      g.append("g").attr("transform", "translate(0," +height+")").call(d3.axisBottom(x).ticks(d3.timeYear.every(5)));
 
-      // Add bars to svg - create new elements based on your data
-      g.append("g")
-         .call(d3.axisLeft(y).tickFormat(function(d){
-             return "$" + d;
-         }).ticks(10))
-         .append("text")
-         .attr("y", 6)
-         .attr("dy", "0.71em")
-         .attr("text-anchor", "end")
-         .text("value");
+      g.selectAll("bar").data(data).enter().append("rect")
+          .attr("x", function(d){return x(d.year)})
+          .attr("y", function(d){return y(d.running_total)})
+          .attr("fill", "steelblue")
+          .attr("width", 5)
+          .attr("height", function(d) { return height - y(d.running_total);});
+
+      g.append("g").attr("transform", "translate(0," +height+")")
+          .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%10)})));
+
+      g.append("g").call(d3.axisLeft(y));
+
+      g.append("text")
+          .attr("transform","translate(" + width/2+ " ," + (height + 30) + ")")
+          .style("text-anchor", "middle")
+          .text("year");
+
+      g.append("text")
+          .attr("y", -50)
+          .attr("x", -height/2)
+          .attr("transform","rotate(-90)")
+          .style("text-anchor", "middle")
+          .text("running_total");
+
+
+
     }).catch(function (error) {
       console.log(error);
     });
