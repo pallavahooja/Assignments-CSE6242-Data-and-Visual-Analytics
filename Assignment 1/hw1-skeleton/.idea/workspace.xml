@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6457795-5d40-40b4-8d8b-13f4e2e636af" name="Default Changelist" comment="" />
+    <list default="true" id="f6457795-5d40-40b4-8d8b-13f4e2e636af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q1/edges.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Q1/edges.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q1/nodes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Q1/nodes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q1/submission.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q1/submission.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q2/Q2" beforeDir="false" afterPath="$PROJECT_DIR$/Q2/Q2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q2/Q2_SQL.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q2/Q2_SQL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q2/sample" beforeDir="false" afterPath="$PROJECT_DIR$/Q2/sample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q3/q3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Q3/q3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +39,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Q3/q3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Q3/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Q2/data/movie_overview.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="61" column="137" selection-start-line="61" selection-start-column="132" selection-end-line="61" selection-end-column="137" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Q2/data/movies.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-42">
+              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Q2/data/movie_cast.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-162875">
+              <caret line="15612" selection-start-line="15612" selection-end-line="15612" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Q4/a.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="1275" column="32" selection-start-line="1275" selection-start-column="32" selection-end-line="1275" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q1/submission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="304" column="92" selection-start-line="304" selection-start-column="92" selection-end-line="304" selection-end-column="92" />
+            <state relative-caret-position="116">
+              <caret line="74" column="20" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -42,19 +115,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q1/edges.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="3029" lean-forward="true" selection-start-line="3029" selection-end-line="3029" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q1/nodes.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+            <state relative-caret-position="22134">
+              <caret line="1054" selection-start-line="1054" selection-end-line="1054" />
             </state>
           </provider>
         </entry>
@@ -62,61 +126,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q2/Q2_SQL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="227" column="8" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="8" />
+            <state relative-caret-position="-483">
+              <caret line="190" column="38" selection-start-line="190" selection-start-column="38" selection-end-line="190" selection-end-column="38" />
               <folding>
                 <element signature="e#164#178#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q3/q3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q3/q3.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q3/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q2/data/movie_cast.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="15612" selection-start-line="15612" selection-end-line="15612" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q2/data/movies.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="1084" column="6" selection-start-line="1084" selection-end-line="1084" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/http/client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="938" selection-start-line="938" selection-end-line="938" />
             </state>
           </provider>
         </entry>
@@ -135,7 +149,6 @@
       <find>vote_avg</find>
       <find>MOVIES_CAS</find>
       <find>open(</find>
-      <find>war</find>
       <find>CAST_BIO</find>
       <find>Michael Caine</find>
       <find>Interstellar</find>
@@ -144,21 +157,42 @@
       <find>David Oyelowo</find>
       <find>*/</find>
       <find>!=</find>
-      <find>OR</find>
       <find>HTTPS</find>
+      <find>OR</find>
+      <find>max_degree_nodes</find>
+      <find>argo</find>
+      <find>max_</find>
+      <find>order</find>
+      <find>add_edge</find>
+      <find>commit</find>
+      <find>csv_f</find>
+      <find>printf('%.2f</find>
+      <find>or(</find>
+      <find>war</find>
+      <find>A.CAST_ID</find>
+      <find>fight</find>
+      <find>source,</find>
     </findStrings>
     <replaceStrings>
       <replace>vote_average</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/33cc621b-a118-494f-a0cd-e406d867e66c/console.sql" />
-        <option value="$PROJECT_DIR$/Q2/Q2_SQL.py" />
         <option value="$PROJECT_DIR$/Q3/server.py" />
-        <option value="$PROJECT_DIR$/Q3/q3.html" />
+        <option value="$PROJECT_DIR$/Q4/a.json" />
+        <option value="$PROJECT_DIR$/Q1/edges.csv" />
+        <option value="$PROJECT_DIR$/Q1/nodes.csv" />
+        <option value="$PROJECT_DIR$/Q4/Q4Observations.txt" />
+        <option value="$PROJECT_DIR$/Q2/Q2_SQL.py" />
         <option value="$PROJECT_DIR$/Q1/submission.py" />
+        <option value="$PROJECT_DIR$/Q3/q3.html" />
+        <option value="$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py" />
       </list>
     </option>
   </component>
@@ -168,6 +202,7 @@
     <option name="width" value="979" />
     <option name="height" value="1049" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -208,88 +243,14 @@
             </path>
             <path>
               <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="hw1-skeleton" type="462c0819:PsiDirectoryNode" />
+              <item name="Q5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="-2117081421" type="70582d5e:PySkeletonsNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Python37" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Python37" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Python37" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Python37" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Typeshed Stubs" type="9c07c3ae:PyTypeShedNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Typeshed Stubs" type="9c07c3ae:PyTypeShedNode" />
-              <item name="2and3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Typeshed Stubs" type="9c07c3ae:PyTypeShedNode" />
-              <item name="2and3" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlite3" type="462c0819:PsiDirectoryNode" />
+              <item name="hw1-skeleton" type="462c0819:PsiDirectoryNode" />
+              <item name="Q5" type="462c0819:PsiDirectoryNode" />
+              <item name="wrangling_scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hw1-skeleton" type="b2602c69:ProjectViewProjectNode" />
@@ -314,6 +275,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -332,7 +294,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.submission">
+  <component name="RunManager" selected="Python.server">
     <configuration name="Q2_SQL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw1-skeleton" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -401,8 +363,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.submission" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.submission" />
         <item itemvalue="Python.Q2_SQL" />
       </list>
     </recent_temporary>
@@ -417,12 +379,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598114601363</updated>
-      <workItem from="1598114606717" duration="27123000" />
+      <workItem from="1598114606717" duration="53237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27123000" />
+    <option name="totallyTimeSpent" value="53237000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -442,14 +404,14 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32991204" />
       <window_info anchor="bottom" id="Python Console" weight="0.32991204" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32991204" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32991204" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24926686" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5073314" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -463,7 +425,7 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24966443" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32991204" />
@@ -474,11 +436,11 @@
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.3431085" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.5073314" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.32991204" />
       <window_info anchor="right" id="Remote Host" order="0" />
       <window_info anchor="right" id="SciView" order="1" />
       <window_info anchor="right" id="Database" order="2" weight="0.3295302" />
@@ -494,25 +456,72 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Q1/submission.py</url>
-          <line>340</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
+          <line>226</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
-          <line>202</line>
-          <option name="timeStamp" value="15" />
+          <line>100</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
+          <line>277</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
+          <line>195</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
+          <line>213</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
+          <line>258</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Q2/Q2_SQL.py</url>
+          <line>253</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/hw1_skeleton$Q2_SQL.coverage" NAME="Q2_SQL Coverage Results" MODIFIED="1598176090893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Q2" />
-    <SUITE FILE_PATH="coverage/hw1_skeleton$server.coverage" NAME="server Coverage Results" MODIFIED="1598178682262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Q3" />
-    <SUITE FILE_PATH="coverage/hw1_skeleton$submission.coverage" NAME="submission Coverage Results" MODIFIED="1598199436031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Q1" />
+    <SUITE FILE_PATH="coverage/hw1_skeleton$Q2_SQL.coverage" NAME="Q2_SQL Coverage Results" MODIFIED="1598588548780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Q2" />
+    <SUITE FILE_PATH="coverage/hw1_skeleton$server.coverage" NAME="server Coverage Results" MODIFIED="1598589011955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Q3" />
+    <SUITE FILE_PATH="coverage/hw1_skeleton$submission.coverage" NAME="submission Coverage Results" MODIFIED="1598588903451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Q1" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>cursor.fetchall()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>conn.execute(&quot;SELECT * FROM GOOD_COLLABORATION&quot;).fetchall()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>part_g_i_sql = &quot;SELECT * FROM GOOD_COLLABORATION&quot;
+cursor = connection.execute(part_g_i_sql)
+cursor.fetchall()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>connection.execute(&quot;select * from good_collaboration&quot;).fetchall()</expression-string>
         <language-id>Python</language-id>
@@ -530,11 +539,6 @@
       </expression>
       <expression>
         <expression-string>connection.execute(&quot;SELECT COUNT(*) FROM MOVIES&quot;).fetchall()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>cursor.fetchall()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -579,68 +583,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q2/data/movies.csv">
+    <entry file="file://$PROJECT_DIR$/Q3/q3.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="1084" column="6" selection-start-line="1084" selection-end-line="1084" selection-end-column="6" />
+        <state relative-caret-position="21">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q1/edges.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q1/nodes.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22134">
+          <caret line="1054" selection-start-line="1054" selection-end-line="1054" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q4/Q4Observations.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q4/a.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="1275" column="32" selection-start-line="1275" selection-start-column="32" selection-end-line="1275" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Q2/data/movie_cast.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="-162875">
           <caret line="15612" selection-start-line="15612" selection-end-line="15612" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/server.py">
+    <entry file="file://$PROJECT_DIR$/Q2/data/movies.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state relative-caret-position="-42">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q2/data/movie_overview.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="61" column="137" selection-start-line="61" selection-start-column="132" selection-end-line="61" selection-end-column="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Q2/Q2_SQL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="227" column="8" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="8" />
+        <state relative-caret-position="-483">
+          <caret line="190" column="38" selection-start-line="190" selection-start-column="38" selection-end-line="190" selection-end-column="38" />
           <folding>
             <element signature="e#164#178#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/q3.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/q3.html">
+    <entry file="file://$PROJECT_DIR$/Q3/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q1/edges.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="3029" lean-forward="true" selection-start-line="3029" selection-end-line="3029" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q1/nodes.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+        <state relative-caret-position="63">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Q1/submission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="304" column="92" selection-start-line="304" selection-start-column="92" selection-end-line="304" selection-end-column="92" />
+        <state relative-caret-position="116">
+          <caret line="74" column="20" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="20" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/q3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
         </state>
       </provider>
     </entry>

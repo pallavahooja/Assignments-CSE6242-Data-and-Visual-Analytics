@@ -101,11 +101,11 @@ class Graph:
         consolidated = {}
         for id, name in self.nodes:
             for edge in self.edges:
-                if name in edge:
-                    consolidated[name] = consolidated.get(name, 0) + 1
+                if id in edge:
+                    consolidated[id] = consolidated.get(id, 0) + 1
         max_value = max(consolidated.values())
 
-        result = {name: count for name, count in consolidated.items() if count == max_value}
+        result = {id: count for id, count in consolidated.items() if count == max_value}
         return result
 
 
@@ -302,11 +302,10 @@ def return_argo_lite_snapshot()->str:
     """
     Return the shared URL of your published graph in Argo-Lite
     """
-    return "https://poloclub.github.io/argo-graph-lite/#8b738a3a-4bf9-437b-8c97-0014cb5bdc69"
+    return "https://poloclub.github.io/argo-graph-lite/#0de7a450-e86d-4fcb-aaf2-68c13c67133a"
 
 
 if __name__ == "__main__":
-
     graph = Graph()
     graph.add_node(id='5064', name='Meryl Streep')
     tmdb_api_utils = TMDBAPIUtils(api_key='08f2309ae878c65ce3df71cc04237e0b')
@@ -314,7 +313,7 @@ if __name__ == "__main__":
     processed_persons = ["5064"]
     processed_movies = []
     new_person_ids = []
-    i = 4
+    i = 3
     while i > 0:
         print("Persons for this iteration", len(person_ids))
         q = 1
@@ -328,15 +327,14 @@ if __name__ == "__main__":
                     continue
                 else:
                     processed_movies.append(movie['id'])
-                cast = tmdb_api_utils.get_movie_cast(movie['id'], 3)
+                cast = tmdb_api_utils.get_movie_cast(movie['id'], 3, exclude_ids = [person_id])
                 for member in cast:
                     member_id = str(member['id'])
-                    if member_id in processed_persons:
-                        continue
-                    else:
+                    if member_id not in processed_persons:
                         processed_persons.append(member_id)
-                    new_person_ids.append(member_id)
-                    graph.add_node(member_id, member['name'].replace(",", ""))
+                        new_person_ids.append(member_id)
+                    graph.add_node(member_id, member['name'].encode("ascii", "ignore").decode("ascii")
+                                   .replace(",", ""))
                     graph.add_edge(person_id, member_id)
         i -= 1
         print("Iteration done ", len(graph.nodes))

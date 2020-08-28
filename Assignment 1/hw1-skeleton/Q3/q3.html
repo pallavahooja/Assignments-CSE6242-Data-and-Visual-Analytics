@@ -3,6 +3,7 @@
 <!-- run: http-server & -->
 
 <head>
+  <title>Running Total of TMDb Movies by Year</title>
   <style>
   </style>
 </head>
@@ -33,7 +34,21 @@
     var svg = d3.select("body").append("svg")
         .attr("width", 800)
         .attr("height", 500);
+
     var g = svg.append("g").attr("transform", "translate(75 , 50)");
+
+    g.append("text")
+        .attr("x", (width / 2))
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("Running Total of TMDb Movies by Year");
+
+    g.append("text")
+        .attr("x", width - 30)
+        .attr("y", height + 30)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("psrinivasan48");
 
     // Get the data
 	var pathToCsv = "q3.csv";
@@ -56,7 +71,7 @@
           .attr("height", function(d) { return height - y(d.running_total);});
 
       g.append("g").attr("transform", "translate(0," +height+")")
-          .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%10)})));
+          .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(parseInt(d)%10)})));
 
       g.append("g").call(d3.axisLeft(y));
 

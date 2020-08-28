@@ -1,0 +1,5 @@
+i.rows: 47
+ii.columns: 5
+iii.ngram fingerprint: 120
+iv.GREL_categoryname:if(value==null, "Unknown", value)
+v.GREL_highpriced:if(value>90, 1, 0)
