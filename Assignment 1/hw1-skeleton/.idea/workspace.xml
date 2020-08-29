@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6457795-5d40-40b4-8d8b-13f4e2e636af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Q1/edges.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Q1/edges.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q1/nodes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Q1/nodes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q1/submission.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q1/submission.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q2/Q2" beforeDir="false" afterPath="$PROJECT_DIR$/Q2/Q2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q2/sample" beforeDir="false" afterPath="$PROJECT_DIR$/Q2/sample" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q4/Q4Observations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Q4/Q4Observations.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q4/a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q2/Q2_SQL.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q2/Q2_SQL.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,55 +32,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q3/q3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q3/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q2/data/movie_overview.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="61" column="137" selection-start-line="61" selection-start-column="132" selection-end-line="61" selection-end-column="137" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q2/data/movies.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Q1/submission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="304" column="92" selection-start-line="304" selection-start-column="92" selection-end-line="304" selection-end-column="92" />
+            <state relative-caret-position="252">
+              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="47" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -115,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q1/edges.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="279">
               <caret line="1654" selection-start-line="1654" selection-end-line="1654" />
             </state>
           </provider>
@@ -124,8 +73,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q1/nodes.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="1051" column="26" selection-start-line="1051" selection-start-column="26" selection-end-line="1051" selection-end-column="26" />
+            <state relative-caret-position="-2514">
+              <caret line="919" column="7" selection-start-line="1" selection-end-line="919" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Q2/Q2_SQL.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="219" column="41" selection-start-line="219" selection-start-column="41" selection-end-line="219" selection-end-column="41" />
+              <folding>
+                <element signature="e#164#178#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,10 +124,10 @@
       <find>csv_f</find>
       <find>printf('%.2f</find>
       <find>or(</find>
-      <find>war</find>
       <find>A.CAST_ID</find>
-      <find>fight</find>
       <find>source,</find>
+      <find>fight</find>
+      <find>war</find>
     </findStrings>
     <replaceStrings>
       <replace>vote_average</replace>
@@ -183,12 +144,12 @@
         <option value="$PROJECT_DIR$/Q4/a.json" />
         <option value="$PROJECT_DIR$/Q1/edges.csv" />
         <option value="$PROJECT_DIR$/Q1/nodes.csv" />
-        <option value="$PROJECT_DIR$/Q2/Q2_SQL.py" />
         <option value="$PROJECT_DIR$/Q3/q3.html" />
         <option value="$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py" />
         <option value="$PROJECT_DIR$/Q4/changes.json" />
         <option value="$PROJECT_DIR$/Q4/Q4Observations.txt" />
         <option value="$PROJECT_DIR$/Q1/submission.py" />
+        <option value="$PROJECT_DIR$/Q2/Q2_SQL.py" />
       </list>
     </option>
   </component>
@@ -375,12 +336,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598114601363</updated>
-      <workItem from="1598114606717" duration="57613000" />
+      <workItem from="1598114606717" duration="59435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57613000" />
+    <option name="totallyTimeSpent" value="59435000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,7 +357,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -407,8 +368,8 @@
       <window_info anchor="bottom" id="Database Console" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5073314" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5073314" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991204" />
@@ -600,51 +561,6 @@ cursor.fetchall()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q2/data/movies.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q2/data/movie_overview.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="61" column="137" selection-start-line="61" selection-start-column="132" selection-end-line="61" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/q3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q2/Q2_SQL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="266" selection-start-line="266" selection-end-line="266" />
-          <folding>
-            <element signature="e#164#178#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Q4/changes.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -659,26 +575,71 @@ cursor.fetchall()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q1/nodes.csv">
+    <entry file="file://$PROJECT_DIR$/Q5/wrangling_scripts/wrangling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="1051" column="26" selection-start-line="1051" selection-start-column="26" selection-end-line="1051" selection-end-column="26" />
+        <state relative-caret-position="63">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q1/edges.csv">
+    <entry file="file://$PROJECT_DIR$/Q3/q3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="1654" selection-start-line="1654" selection-end-line="1654" />
+        <state relative-caret-position="183">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q2/data/movie_overview.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="61" column="137" selection-start-line="61" selection-start-column="132" selection-end-line="61" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q2/data/movies.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q1/nodes.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2514">
+          <caret line="919" column="7" selection-start-line="1" selection-end-line="919" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Q1/submission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="304" column="92" selection-start-line="304" selection-start-column="92" selection-end-line="304" selection-end-column="92" />
+        <state relative-caret-position="252">
+          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="47" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q1/edges.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="1654" selection-start-line="1654" selection-end-line="1654" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q2/Q2_SQL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="219" column="41" selection-start-line="219" selection-start-column="41" selection-end-line="219" selection-end-column="41" />
+          <folding>
+            <element signature="e#164#178#0" expanded="true" />
           </folding>
         </state>
       </provider>
