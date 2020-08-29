@@ -1257,24 +1257,15 @@
           ],
           "selectBlank": false,
           "selectError": false
-        },
-        {
-          "type": "text",
-          "name": "high_priced",
-          "columnName": "high_priced",
-          "query": "",
-          "mode": "text",
-          "caseSensitive": false,
-          "invert": false
         }
       ],
       "mode": "row-based"
     },
     "baseColumnName": "item_description",
-    "expression": "grel:if(or(contains(value,\"discount\"),contains(value,\"sale\"),contains(value,\"offer\")), 1, 0)",
+    "expression": "grel:if(or(contains(value.toLowercase(), \"offer\"), contains(value.toLowercase(), \"discount\"), contains(value.toLowercase(), \"sale\")), 1, 0)",
     "onError": "set-to-blank",
     "newColumnName": "has_offer",
     "columnInsertIndex": 14,
-    "description": "Create column has_offer at index 14 based on column item_description using expression grel:if(or(contains(value,\"discount\"),contains(value,\"sale\"),contains(value,\"offer\")), 1, 0)"
+    "description": "Create column has_offer at index 14 based on column item_description using expression grel:if(or(contains(value.toLowercase(), \"offer\"), contains(value.toLowercase(), \"discount\"), contains(value.toLowercase(), \"sale\")), 1, 0)"
   }
 ]

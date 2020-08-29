@@ -302,7 +302,7 @@ def return_argo_lite_snapshot()->str:
     """
     Return the shared URL of your published graph in Argo-Lite
     """
-    return "https://poloclub.github.io/argo-graph-lite/#0de7a450-e86d-4fcb-aaf2-68c13c67133a"
+    return "https://poloclub.github.io/argo-graph-lite/#3141c97d-3336-4966-bce8-c6b41d7faac0"
 
 
 if __name__ == "__main__":
@@ -323,16 +323,10 @@ if __name__ == "__main__":
             # if person_id == 0: continue
             movies = tmdb_api_utils.get_movie_credits_for_person(person_id, 8.0)
             for movie in movies:
-                if movie['id'] in processed_movies:
-                    continue
-                else:
-                    processed_movies.append(movie['id'])
                 cast = tmdb_api_utils.get_movie_cast(movie['id'], 3, exclude_ids = [person_id])
                 for member in cast:
                     member_id = str(member['id'])
-                    if member_id not in processed_persons:
-                        processed_persons.append(member_id)
-                        new_person_ids.append(member_id)
+                    new_person_ids.append(member_id)
                     graph.add_node(member_id, member['name'].encode("ascii", "ignore").decode("ascii")
                                    .replace(",", ""))
                     graph.add_edge(person_id, member_id)

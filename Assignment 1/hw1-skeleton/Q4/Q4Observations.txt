@@ -3,3 +3,4 @@ ii.columns: 5
 iii.ngram fingerprint: 120
 iv.GREL_categoryname:if(value==null, "Unknown", value)
 v.GREL_highpriced:if(value>90, 1, 0)
+vi.GREL_hasoffer:if(or(contains(value.toLowercase(), "offer"), contains(value.toLowercase(), "discount"), contains(value.toLowercase(), "sale")), 1, 0)

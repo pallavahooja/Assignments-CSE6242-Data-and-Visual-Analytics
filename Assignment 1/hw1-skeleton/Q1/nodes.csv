@@ -63,8 +63,6 @@ id,name
 19429,Bruce Lee
 18897,Jackie Chan
 15111,Jean-Claude Van Damme
-1259,Ennio Morricone
-12453,Wong Kar-wai
 9979,Peter Coyote
 9789,Robert Altman
 20156,Sammy Davis Jr.
@@ -81,6 +79,7 @@ id,name
 1545693,Zazie Beetz
 1158,Al Pacino
 3092,Diane Keaton
+1259,Ennio Morricone
 19665,John Boorman
 1208,Ralph Bellamy
 11181,Kenneth Branagh
@@ -435,15 +434,6 @@ id,name
 238888,Tien Peng
 695,Roy Chiao
 144302,Claudia Bassols
-1115053,Irene Bignardi
-25822,Marcello Gatti
-354606,Tullio Kezich
-9871,Ursula Andress
-65314,Giuseppe Tornatore
-28782,Monica Bellucci
-102880,Cherie Chung
-83696,Cecilia Yip
-944055,Alex To Tak-Wai
 56890,Malcolm McDowell
 46393,Roseanne Barr
 8893,Stockard Channing
@@ -461,6 +451,7 @@ id,name
 2734157,Xiaoming Zhu
 2045089,Jeanmarie Simpson
 4687,Patricia Arquette
+9871,Ursula Andress
 15531,Ossie Davis
 51718,Naura Hayden
 19178,Dick Shawn
@@ -522,6 +513,11 @@ id,name
 939118,Haoyu Yang
 1528800,Meng Li
 39996,Sidney Lumet
+1115053,Irene Bignardi
+25822,Marcello Gatti
+354606,Tullio Kezich
+65314,Giuseppe Tornatore
+28782,Monica Bellucci
 12235,Vilmos Zsigmond
 45380,Turhan Bey
 29312,Christopher George
@@ -756,6 +752,9 @@ id,name
 72254,ric Caravaca
 96074,Leslie Feist
 1665140,Adam Cohen
+120608,Sonia Manzano
+1596910,Nitya Vidyasagar
+24045,Joseph Gordon-Levitt
 1400290,Alan Gorrie
 18632,Brigid Berlin
 2030027,Arthur Janov
@@ -888,7 +887,6 @@ id,name
 1846,Andr Hennicke
 53109,Marie Bumer
 20016,Vadim Glowna
-24045,Joseph Gordon-Levitt
 27578,Ellen Page
 21007,Jonah Hill
 234352,Margot Robbie
