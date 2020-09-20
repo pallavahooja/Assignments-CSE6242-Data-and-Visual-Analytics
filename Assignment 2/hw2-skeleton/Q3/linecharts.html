@@ -23,6 +23,14 @@
         font-weight: bold;
     }
 
+    @media print {
+        .pagebreak {
+            clear: both;
+            page-break-after: always;
+        }
+    }
+
+
 </style>
 <body>
 
@@ -35,14 +43,14 @@
     var x = d3.scaleTime().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);
     var yLog = d3.scaleLog().clamp(true).range([height, 0]);
+    var ySqrt = d3.scaleSqrt().clamp(true).range([height, 0]);
 
     var timeParser = d3.timeFormat("%b %Y");
     var legends = ['Catan', 'Dominion',
         'Codenames', 'Terraforming Mars',
         'Gloomhaven', 'Magic: The Gathering',
         'Dixit', 'Monopoly'];
-    // var lineGraphs = [];
-    // for(var i in legends){
+
     function lineGraphs(i) {
         return d3.line().x(function (d) {
             return x(new Date(d.month));
@@ -59,6 +67,14 @@
         });
     }
 
+    function lineGraphsSqrt(i) {
+        return d3.line().x(function (d) {
+            return x(new Date(d.month));
+        }).y(function (d) {
+            return ySqrt(+d[legends[i]])
+        });
+    }
+
     var svgFig1 = d3.select("body")
         .append("svg")
         .attr("class", "fig1")
@@ -66,6 +82,7 @@
         .attr("height", height + 2 * margin)
         .append("g")
         .attr("transform", "translate(" + margin + "," + margin + ")");
+    d3.select("body").append("div").attr("class", "pagebreak");
 
     var svgFig2 = d3.select("body")
         .append("svg")
@@ -74,6 +91,18 @@
         .attr("height", height + 2 * margin)
         .append("g")
         .attr("transform", "translate(" + margin + "," + margin + ")");
+    d3.select("body").append("div").attr("class", "pagebreak");
+
+
+    var svgFig4 = d3.select("body")
+        .append("svg")
+        .attr("class", "fig1")
+        .attr("width", width + 2 * margin)
+        .attr("height", height + 2 * margin)
+        .append("g")
+        .attr("transform", "translate(" + margin + "," + margin + ")");
+    d3.select("body").append("div").attr("class", "pagebreak");
+
 
     var svgFig3 = d3.select("body")
         .append("svg")
@@ -82,6 +111,13 @@
         .attr("height", height + 2 * margin)
         .append("g")
         .attr("transform", "translate(" + margin + "," + margin + ")");
+    d3.select("body").append("div").attr("class", "pagebreak");
+    svgFig3.append("text")
+        .attr("x", width - 250)
+        .attr("y", height + 100)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("psrinivasan48");
 
     d3.dsv(",", "boardgame_ratings.csv", function (d) {
         var obj = {
@@ -100,10 +136,12 @@
         }));
         y.domain([min, max]);
         yLog.domain([min, max]);
+        ySqrt.domain([min, max]);
 
         for (var i in legends) {
             var lg = lineGraphs(i);
             var lgLog = lineGraphsLog(i);
+            var lgSqrt = lineGraphsSqrt(i);
             svgFig1.append("path")
                 .data([data])
                 .attr("class", "line")
@@ -140,6 +178,19 @@
             svgFig3.append("text")
                 .attr("transform", "translate(" + (width + 10) + "," +
                     yLog(data[data.length - 1][legends[i]]) + ")")
+                .attr("text-anchor", "start")
+                .style("fill", d3.schemeTableau10[i])
+                .text(legends[i]);
+            svgFig4.append("path")
+                .data([data])
+                .attr("class", "line")
+                .attr("d", lgSqrt)
+                .style("stroke", d3.schemeTableau10[i])
+                .append("text")
+                .text(legends[i]);
+            svgFig4.append("text")
+                .attr("transform", "translate(" + (width + 10) + "," +
+                    ySqrt(data[data.length - 1][legends[i]]) + ")")
                 .attr("text-anchor", "start")
                 .style("fill", d3.schemeTableau10[i])
                 .text(legends[i]);
@@ -192,6 +243,30 @@
                     }).attr("y", function (d) {
                         return yLog(d[legends[i]]) + 5
                     });
+                svgFig4.selectAll("circles")
+                    .data(data)
+                    .enter()
+                    .append("circle")
+                    .attr("fill", d3.schemeTableau10[i])
+                    .attr("cx", function (d) {
+                        return x(new Date(d.month))
+                    })
+                    .attr("cy", function (d) {
+                        return ySqrt(d[legends[i]])
+                    })
+                    .attr("r", 10);
+                svgFig4.selectAll("circles")
+                    .data(data)
+                    .enter()
+                    .append("text")
+                    .attr("class", "count-font")
+                    .text(function (d) {
+                        return d[legends[i] + "=rank"];
+                    }).attr("x", function (d) {
+                        return x(new Date(d.month)) - 5;
+                    }).attr("y", function (d) {
+                        return ySqrt(d[legends[i]]) + 5
+                    });
             }
 
         }
@@ -219,6 +294,18 @@
         svgFig3.append("text")
             .attr("transform", "translate(" + (width - 30) + "," +
                 (height - 10) + ")").text("BoardGameGeek Rank");
+        svgFig4.append("circle")
+            .attr("fill", "black")
+            .attr("transform", "translate(" + (width + 20) + "," +
+                (height - 30) + ")")
+            .attr("r", 10);
+        svgFig4.append("text")
+            .attr("class", "count-font")
+            .attr("transform", "translate(" + (width + 12) + "," +
+                (height - 27) + ")").text("NUM");
+        svgFig4.append("text")
+            .attr("transform", "translate(" + (width - 30) + "," +
+                (height - 10) + ")").text("BoardGameGeek Rank");
 
         svgFig1.append("g")
             .attr("transform", "translate(0," + height + ")")
@@ -238,7 +325,14 @@
             .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b %Y")));
 
         svgFig3.append("g")
-            .call(d3.axisLeft(y));
+            .call(d3.axisLeft(yLog));
+
+        svgFig4.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b %Y")));
+
+        svgFig4.append("g")
+            .call(d3.axisLeft(ySqrt));
 
         function findMinMax(data) {
             var min = Number.POSITIVE_INFINITY;
@@ -300,6 +394,23 @@
             .style("text-anchor", "middle")
             .text("Number of Ratings");
         svgFig3.append("text")
+            .attr("x", (width / 2))
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .text("Number of Ratings 2016-2020 with Rankings (Logarithmic Scale)");
+
+        svgFig4.append("text")
+            .attr("transform", "translate(" + width / 2 + " ," + (height + 30) + ")")
+            .style("text-anchor", "middle")
+            .text("Month");
+
+        svgFig4.append("text")
+            .attr("y", -50)
+            .attr("x", -height / 2)
+            .attr("transform", "rotate(-90)")
+            .style("text-anchor", "middle")
+            .text("Number of Ratings");
+        svgFig4.append("text")
             .attr("x", (width / 2))
             .attr("text-anchor", "middle")
             .style("font-size", "16px")
