@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <script type="text/javascript" src="../lib/d3.v5.min.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
 
 <style>
     .line {
@@ -146,60 +145,60 @@
                 .data([data])
                 .attr("class", "line")
                 .attr("d", lg)
-                .style("stroke", d3.schemeTableau10[i])
+                .style("stroke", d3.schemeCategory10[i])
                 .append("text")
                 .text(legends[i]);
             svgFig1.append("text")
                 .attr("transform", "translate(" + (width + 10) + "," +
                     y(data[data.length - 1][legends[i]]) + ")")
                 .attr("text-anchor", "start")
-                .style("fill", d3.schemeTableau10[i])
+                .style("fill", d3.schemeCategory10[i])
                 .text(legends[i]);
             svgFig2.append("path")
                 .data([data])
                 .attr("class", "line")
                 .attr("d", lg)
-                .style("stroke", d3.schemeTableau10[i])
+                .style("stroke", d3.schemeCategory10[i])
                 .append("text")
                 .text(legends[i]);
             svgFig2.append("text")
                 .attr("transform", "translate(" + (width + 10) + "," +
                     y(data[data.length - 1][legends[i]]) + ")")
                 .attr("text-anchor", "start")
-                .style("fill", d3.schemeTableau10[i])
+                .style("fill", d3.schemeCategory10[i])
                 .text(legends[i]);
             svgFig3.append("path")
                 .data([data])
                 .attr("class", "line")
                 .attr("d", lgLog)
-                .style("stroke", d3.schemeTableau10[i])
+                .style("stroke", d3.schemeCategory10[i])
                 .append("text")
                 .text(legends[i]);
             svgFig3.append("text")
                 .attr("transform", "translate(" + (width + 10) + "," +
                     yLog(data[data.length - 1][legends[i]]) + ")")
                 .attr("text-anchor", "start")
-                .style("fill", d3.schemeTableau10[i])
+                .style("fill", d3.schemeCategory10[i])
                 .text(legends[i]);
             svgFig4.append("path")
                 .data([data])
                 .attr("class", "line")
                 .attr("d", lgSqrt)
-                .style("stroke", d3.schemeTableau10[i])
+                .style("stroke", d3.schemeCategory10[i])
                 .append("text")
                 .text(legends[i]);
             svgFig4.append("text")
                 .attr("transform", "translate(" + (width + 10) + "," +
                     ySqrt(data[data.length - 1][legends[i]]) + ")")
                 .attr("text-anchor", "start")
-                .style("fill", d3.schemeTableau10[i])
+                .style("fill", d3.schemeCategory10[i])
                 .text(legends[i]);
             if (["Catan", "Codenames", "Terraforming Mars", "Gloomhaven"].includes(legends[i])) {
                 svgFig2.selectAll("circles")
                     .data(data)
                     .enter()
                     .append("circle")
-                    .attr("fill", d3.schemeTableau10[i])
+                    .attr("fill", d3.schemeCategory10[i])
                     .attr("cx", function (d) {
                         return x(new Date(d.month))
                     })
@@ -223,7 +222,7 @@
                     .data(data)
                     .enter()
                     .append("circle")
-                    .attr("fill", d3.schemeTableau10[i])
+                    .attr("fill", d3.schemeCategory10[i])
                     .attr("cx", function (d) {
                         return x(new Date(d.month))
                     })
@@ -247,7 +246,7 @@
                     .data(data)
                     .enter()
                     .append("circle")
-                    .attr("fill", d3.schemeTableau10[i])
+                    .attr("fill", d3.schemeCategory10[i])
                     .attr("cx", function (d) {
                         return x(new Date(d.month))
                     })
@@ -395,6 +394,7 @@
             .text("Number of Ratings");
         svgFig3.append("text")
             .attr("x", (width / 2))
+            .attr("y", -5)
             .attr("text-anchor", "middle")
             .style("font-size", "16px")
             .text("Number of Ratings 2016-2020 with Rankings (Logarithmic Scale)");
