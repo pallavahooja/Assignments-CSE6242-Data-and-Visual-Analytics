@@ -1,17 +1,156 @@
 <!DOCTYPE html>
+<style>
+    .line {
+        fill: none;
+        stroke-width: 2px;
+    }
+
+</style>
 <head>
-  <title>Games Rating: 2015 - 2019</title>
-  <meta charset="utf-8">
-  <script type="text/javascript" src="../lib/d3.v5.min.js"></script>
-  <script type="text/javascript" src="../lib/d3-dsv.min.js"></script>
+    <title>Games Rating: 2015 - 2019</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../lib/d3.v5.min.js"></script>
+    <script type="text/javascript" src="../lib/d3-dsv.min.js"></script>
+    <script type="text/javascript" src="../lib/d3-legend.min.js"></script>
 </head>
 
 <body>
 
-<div id="container"></div>
+<div>
+    <div id="container" style="float:left"></div>
+    <div id="legend"></div>
+</div>
+
 
 <script>
+    var margin = 50; //equal margins on all sides
+    var width = 700 - 2 * margin;
+    var height = 500 - 2 * margin;
 
+    var x = d3.scaleLinear().range([0, width]);
+    var y = d3.scaleLinear().range([height, 0]);
+
+    var svgFig = d3.select("#container")
+        .append("svg")
+        .attr("width", width + 2 * margin)
+        .attr("height", height + 2 * margin)
+        .append("g")
+        .attr("transform", "translate(" + margin + "," + margin + ")");
+
+    d3.dsv(",", "average-rating.csv", function (d) {
+        return d;
+    }).then(function (data) {
+        var yearwiseData = {};
+        var max = Number.NEGATIVE_INFINITY;
+        var min = Number.POSITIVE_INFINITY;
+        data.forEach(function (d) {
+            var yearData = yearwiseData[d.year] || {};
+            yearData.count = yearData.count || {};
+            var rating = Math.floor(+d.average_rating);
+            yearData.count[rating] =
+                (yearData.count[rating] || 0) + 1;
+            if (yearData.count[rating] > max) max = yearData.count[rating];
+            if (yearData.count[rating] < min) min = yearData.count[rating];
+            yearwiseData[d.year] = yearData;
+        });
+        x.domain([1, 10]);
+        y.domain([min, max]);
+        var i = 0;
+        var years = [];
+        var colors = [];
+        for (var year in yearwiseData) {
+            if (+year < 2015 || +year > 2019) continue;
+            console.log(year);
+            var yearData = yearwiseData[year].count;
+
+            var countData = [];
+            for (var j = 1; j <= 10; j++)
+                yearData[j] = yearData[j] || 0;
+
+
+            for (var count in yearData)
+                countData.push({
+                    "count": +count,
+                    "value": yearData[+count]
+                });
+
+            var lg = d3.line().x(function (d) {
+                return x(d.count);
+            }).y(function (d) {
+                return y(d.value)
+            });
+
+            svgFig.append("path")
+                .data([countData])
+                .attr("class", "line")
+                .attr("d", lg)
+                .style("stroke", d3.schemeCategory10[i]);
+
+            svgFig.selectAll("circles")
+                .data(countData)
+                .enter()
+                .append("circle")
+                .attr("fill", d3.schemeCategory10[i])
+                .attr("cx", function (d) {
+                    return x(d.count)
+                })
+                .attr("cy", function (d) {
+                    return y(d.value)
+                })
+                .attr("r", 4);
+            years.push(year);
+            colors.push(d3.schemeCategory10[i]);
+            i++;
+        }
+
+
+        svgFig.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        svgFig.append("g")
+            .call(d3.axisLeft(y));
+
+        var color = d3.scaleOrdinal()
+            .domain(years).range(colors);
+        var legend = d3.legendColor()
+            .scale(color);
+        var legSvg = d3.selectAll("#legend").append("svg")
+            .attr("transform", "translate(20, 10)");
+
+        legSvg.append("g")
+            .attr("class", "legend")
+            .call(legend);
+
+        svgFig.append("text")
+            .attr("x", width )
+            .attr("y", height + 30)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .text("psrinivasan48");
+
+        svgFig.append("text")
+            .attr("x", (width / 2))
+            .attr("y", -15)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .text("Board Games by Rating (2015-2019)");
+
+        svgFig.append("text")
+            .attr("transform", "translate(" + width / 2 + " ," + (height + 30) + ")")
+            .style("text-anchor", "middle")
+            .text("Rating");
+
+        svgFig.append("text")
+            .attr("y", -30)
+            .attr("x", -height / 2)
+            .attr("transform", "rotate(-90)")
+            .style("text-anchor", "middle")
+            .text("Count");
+
+    }).catch(function (error) {
+        console.log(error);
+    });
 </script>
 
 </body>
