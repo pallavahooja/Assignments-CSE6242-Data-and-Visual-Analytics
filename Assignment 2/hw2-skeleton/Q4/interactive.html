@@ -119,8 +119,11 @@
                 .on('mouseover', function (d) {
                     d3.select(this).attr("r", 8);
                     var year = d3.select(this).attr("data-year");
-                    if(+d.value > 0)
-                        plotHorizontalBarChart(year, d.count, data);
+                    if(+d.value > 0){
+                        var ccol = d3.select(this).attr("fill");
+
+                        plotHorizontalBarChart(year, d.count, data, ccol);
+                    }
                 }).on('mouseout', function (d) {
                     d3.select(this).attr("r", 4);
                     d3.select("#barsvg").html("");
@@ -178,7 +181,7 @@
         console.log(error);
     });
 
-    function plotHorizontalBarChart(year, average_rating, data) {
+    function plotHorizontalBarChart(year, average_rating, data, ccol) {
         var gameData = [];
         var max = Number.NEGATIVE_INFINITY;
         data.forEach(function (d) {
@@ -212,7 +215,7 @@
                 return xb(d.count);
             })
             .attr("height", yb.bandwidth())
-            .attr("fill", "#642222");
+            .attr("fill", ccol);
         barPlot.append("g")
             .call(d3.axisLeft(yb));
         barPlot.append("g")
