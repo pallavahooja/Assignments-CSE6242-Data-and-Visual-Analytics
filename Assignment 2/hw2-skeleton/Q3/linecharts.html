@@ -42,9 +42,10 @@
     var x = d3.scaleTime().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);
     var yLog = d3.scaleLog().clamp(true).range([height, 0]);
-    var ySqrt = d3.scaleSqrt().clamp(true).range([height, 0]);
+    var ySqrt = d3.scaleSqrt().range([height, 0]);
 
     var timeParser = d3.timeFormat("%b %Y");
+    var dateParse = d3.timeParse("%Y-%m-%d");
     var legends = ['Catan', 'Dominion',
         'Codenames', 'Terraforming Mars',
         'Gloomhaven', 'Magic: The Gathering',
@@ -52,7 +53,7 @@
 
     function lineGraphs(i) {
         return d3.line().x(function (d) {
-            return x(new Date(d.month));
+            return x(dateParse(d.date));
         }).y(function (d) {
             return y(+d[legends[i]])
         });
@@ -60,7 +61,7 @@
 
     function lineGraphsLog(i) {
         return d3.line().x(function (d) {
-            return x(new Date(d.month));
+            return x(dateParse(d.date));
         }).y(function (d) {
             return yLog(+d[legends[i]])
         });
@@ -68,7 +69,7 @@
 
     function lineGraphsSqrt(i) {
         return d3.line().x(function (d) {
-            return x(new Date(d.month));
+            return x(dateParse(d.date));
         }).y(function (d) {
             return ySqrt(+d[legends[i]])
         });
@@ -120,7 +121,8 @@
 
     d3.dsv(",", "boardgame_ratings.csv", function (d) {
         var obj = {
-            month: timeParser(new Date(d.date))
+            month: timeParser(new Date(d.date)),
+            date: d.date
         };
         for (var i in legends) {
             obj[legends[i]] = +d[legends[i] + "=count"];
@@ -131,7 +133,7 @@
         var minMax = findMinMax(data);
         var min = minMax[0], max = minMax[1];
         x.domain(d3.extent(data, function (d) {
-            return new Date(d.month);
+            return dateParse(d.date);
         }));
         y.domain([min, max]);
         yLog.domain([min, max]);
@@ -198,9 +200,12 @@
                     .data(data)
                     .enter()
                     .append("circle")
+                    .filter(function(d, iter){
+                        return iter%3===2;
+                    })
                     .attr("fill", d3.schemeCategory10[i])
                     .attr("cx", function (d) {
-                        return x(new Date(d.month))
+                        return x(dateParse(d.date))
                     })
                     .attr("cy", function (d) {
                         return y(d[legends[i]])
@@ -209,22 +214,28 @@
                 svgFig2.selectAll("circles")
                     .data(data)
                     .enter()
+                    .filter(function(d, iter){
+                        return iter%3===2;
+                    })
                     .append("text")
                     .attr("class", "count-font")
                     .text(function (d) {
                         return d[legends[i] + "=rank"];
                     }).attr("x", function (d) {
-                        return x(new Date(d.month)) - 5;
+                        return x(dateParse(d.date)) - 5;
                     }).attr("y", function (d) {
                         return y(d[legends[i]]) + 5
                     });
                 svgFig3.selectAll("circles")
                     .data(data)
                     .enter()
+                    .filter(function(d, iter){
+                        return iter%3===2;
+                    })
                     .append("circle")
                     .attr("fill", d3.schemeCategory10[i])
                     .attr("cx", function (d) {
-                        return x(new Date(d.month))
+                        return x(dateParse(d.date))
                     })
                     .attr("cy", function (d) {
                         return yLog(d[legends[i]])
@@ -233,22 +244,28 @@
                 svgFig3.selectAll("circles")
                     .data(data)
                     .enter()
+                    .filter(function(d, iter){
+                        return iter%3===2;
+                    })
                     .append("text")
                     .attr("class", "count-font")
                     .text(function (d) {
                         return d[legends[i] + "=rank"];
                     }).attr("x", function (d) {
-                        return x(new Date(d.month)) - 5;
+                        return x(dateParse(d.date)) - 5;
                     }).attr("y", function (d) {
                         return yLog(d[legends[i]]) + 5
                     });
                 svgFig4.selectAll("circles")
                     .data(data)
                     .enter()
+                    .filter(function(d, iter){
+                        return iter%3===2;
+                    })
                     .append("circle")
                     .attr("fill", d3.schemeCategory10[i])
                     .attr("cx", function (d) {
-                        return x(new Date(d.month))
+                        return x(dateParse(d.date))
                     })
                     .attr("cy", function (d) {
                         return ySqrt(d[legends[i]])
@@ -257,12 +274,15 @@
                 svgFig4.selectAll("circles")
                     .data(data)
                     .enter()
+                    .filter(function(d, iter){
+                        return iter%3===2;
+                    })
                     .append("text")
                     .attr("class", "count-font")
                     .text(function (d) {
                         return d[legends[i] + "=rank"];
                     }).attr("x", function (d) {
-                        return x(new Date(d.month)) - 5;
+                        return x(dateParse(d.date)) - 5;
                     }).attr("y", function (d) {
                         return ySqrt(d[legends[i]]) + 5
                     });
@@ -276,8 +296,8 @@
             .attr("r", 10);
         svgFig2.append("text")
             .attr("class", "count-font")
-            .attr("transform", "translate(" + (width + 12) + "," +
-                (height - 27) + ")").text("NUM");
+            .attr("transform", "translate(" + (width + 10) + "," +
+                (height - 27) + ")").text("RANK");
         svgFig2.append("text")
             .attr("transform", "translate(" + (width - 30) + "," +
                 (height - 10) + ")").text("BoardGameGeek Rank");
@@ -288,8 +308,8 @@
             .attr("r", 10);
         svgFig3.append("text")
             .attr("class", "count-font")
-            .attr("transform", "translate(" + (width + 12) + "," +
-                (height - 27) + ")").text("NUM");
+            .attr("transform", "translate(" + (width + 10) + "," +
+                (height - 27) + ")").text("RANK");
         svgFig3.append("text")
             .attr("transform", "translate(" + (width - 30) + "," +
                 (height - 10) + ")").text("BoardGameGeek Rank");
@@ -300,8 +320,8 @@
             .attr("r", 10);
         svgFig4.append("text")
             .attr("class", "count-font")
-            .attr("transform", "translate(" + (width + 12) + "," +
-                (height - 27) + ")").text("NUM");
+            .attr("transform", "translate(" + (width + 10) + "," +
+                (height - 27) + ")").text("RANK");
         svgFig4.append("text")
             .attr("transform", "translate(" + (width - 30) + "," +
                 (height - 10) + ")").text("BoardGameGeek Rank");
@@ -397,7 +417,7 @@
             .attr("y", -5)
             .attr("text-anchor", "middle")
             .style("font-size", "16px")
-            .text("Number of Ratings 2016-2020 with Rankings (Logarithmic Scale)");
+            .text("Number of Ratings 2016-2020 with Rankings (Log Scale)");
 
         svgFig4.append("text")
             .attr("transform", "translate(" + width / 2 + " ," + (height + 30) + ")")
