@@ -61,8 +61,8 @@
         .html(function (d) {
             return `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span>
                     <strong>Game: </strong><span class='details'>${d.game}<br/></span>
-                    <strong>Users: </strong><span class='details'>${d.users}<br/></span>
-                    <strong>Rating: </strong><span class='details'>${d.rating}<br/></span>`
+                    <strong>Number of Users: </strong><span class='details'>${d.users}<br/></span>
+                    <strong>Avg Rating: </strong><span class='details'>${d.rating}<br/></span>`
         });
 
     svg.call(tip);
@@ -131,6 +131,7 @@
             .domain(ratings);
 
         var legend = d3.legendColor()
+            .labelFormat(d3.format(".2f"))
             .scale(color);
 
         var div = d3.select("body")
