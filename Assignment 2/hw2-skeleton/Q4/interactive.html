@@ -16,12 +16,11 @@
 
 <body>
 
-<div>
-    <div id="legend" style="float:right"></div>
-
-    <div id="container"></div>
-    <div id="barplot"></div>
+<div style="display: inline-flex;">
+    <div id="container" style="float: left;"></div>
+    <div id="legend" style="float:right;"></div>
 </div>
+    <div id="barplot"></div>
 
 
 <script>
@@ -153,18 +152,20 @@
             .call(legend);
 
         svgFig.append("text")
-            .attr("x", width)
-            .attr("y", height + 30)
-            .attr("text-anchor", "middle")
-            .style("font-size", "16px")
-            .text("psrinivasan48");
-
-        svgFig.append("text")
             .attr("x", (width / 2))
-            .attr("y", -15)
+            .attr("y", -40)
             .attr("text-anchor", "middle")
             .style("font-size", "16px")
             .text("Board Games by Rating (2015-2019)");
+
+        svgFig.append("text")
+            .attr("x", width/2)
+            .attr("y", -25)
+            .attr("text-anchor", "middle")
+            .style("font-size", "13px")
+            .text("psrinivasan48")
+            .attr("fill", "blue");
+
 
         svgFig.append("text")
             .attr("transform", "translate(" + width / 2 + " ," + (height + 30) + ")")
