@@ -1,0 +1,3 @@
+We use non-linear scales if:
+i) A wide range of values are covered
+ii) The range of values are generated from a non-linear function
