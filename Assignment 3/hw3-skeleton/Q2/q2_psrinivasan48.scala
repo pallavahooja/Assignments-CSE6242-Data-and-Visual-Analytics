@@ -82,8 +82,8 @@ df_filter.groupBy(col("PULocationID")).count().withColumnRenamed("count", "numbe
 // Hint: In order to get the result, you may need to perform a join operation between the two dataframes that you created in earlier parts (to come up with the sum of the number of pickups and dropoffs on each location). 
 
 // ENTER THE CODE BELOW
-val df_join = ldf.join(df_filter, $"LocationID"===$"DOLocationID" || $"LocationID"===$"PULocationID")
-df_join.groupBy(col("LocationID")).count().withColumnRenamed("count", "number_activities").orderBy(desc("number_activities"), asc("LocationID")).limit(3).show()
+val df_join1 = ldf.join(df_filter, $"LocationID"===$"DOLocationID" || $"LocationID"===$"PULocationID")
+df_join1.groupBy(col("LocationID")).count().withColumnRenamed("count", "number_activities").orderBy(desc("number_activities"), asc("LocationID")).limit(3).show()
 
 // COMMAND ----------
 
@@ -93,7 +93,7 @@ df_join.groupBy(col("LocationID")).count().withColumnRenamed("count", "number_ac
 // Hint: You can use the dataframe obtained from the previous part, and will need to do the join with the 'taxi_zone_lookup' dataframe. Also, checkout the "agg" function applied to a grouped dataframe.
 
 // ENTER THE CODE BELOW
-df_join.groupBy(col("Borough")).count().withColumnRenamed("count", "total_number_activities").orderBy(desc("total_number_activities")).show()
+df_join1.groupBy(col("Borough")).count().withColumnRenamed("count", "total_number_activities").orderBy(desc("total_number_activities")).show()
 
 // COMMAND ----------
 
@@ -114,10 +114,10 @@ df_daily.withColumn("day_of_week", date_format(col("date"), "EEEE")).groupBy("da
 // Hint: You may need to use "Window" over hour of day, along with "group by" to find the MAXIMUM count of pickups
 
 // ENTER THE CODE BELOW
-var df_join = ldf.join(df_filter, $"LocationID"===$"PULocationID").filter($"Borough" === "Brooklyn").withColumn("hour_of_day", hour(col("pickup_datetime")))
-df_join = df_join.groupBy("Zone", "hour_of_day").count()
-df_join = df_join.withColumn("max_count", max("count").over(Window.partitionBy("hour_of_day"))).where($"count"===$"max_count").select("hour_of_day", "Zone", "max_count").orderBy(asc("hour_of_day"))
-df_join.show(24, false)
+var df_join2 = ldf.join(df_filter, $"LocationID"===$"PULocationID").filter($"Borough" === "Brooklyn").withColumn("hour_of_day", hour(col("pickup_datetime")))
+df_join2 = df_join2.groupBy("Zone", "hour_of_day").count()
+df_join2 = df_join2.withColumn("max_count", max("count").over(Window.partitionBy("hour_of_day"))).where($"count"===$"max_count").select("hour_of_day", "Zone", "max_count").orderBy(asc("hour_of_day"))
+df_join2.show(24, false)
 
 // COMMAND ----------
 
@@ -129,8 +129,7 @@ df_join.show(24, false)
 // Hint: You might need to use lag function, over a window ordered by day of month.
 
 // ENTER THE CODE BELOW
-var df_join = ldf.join(df_filter, $"LocationID"===$"PULocationID").filter($"Borough" === "Manhattan").withColumn("day", dayofmonth(col("pickup_datetime"))).filter(month(col("pickup_datetime")) === 1)
-// df_join = df_join.withColumn("count", count("LocationID").over(Window.partitionBy("day")))
-df_join = df_join.groupBy("day").count().withColumn("prev_val", lag(col("count"), 1, 0).over(Window.orderBy("day")))
-df_join = df_join.withColumn("percent_change", round((col("count") - col("prev_val"))*100/col("prev_val"), 2)).orderBy(desc("percent_change")).select("day", "percent_change").limit(3)
-df_join.show()
+var df_join3 = ldf.join(df_filter, $"LocationID"===$"PULocationID").filter($"Borough" === "Manhattan").withColumn("day", dayofmonth(col("pickup_datetime"))).filter(month(col("pickup_datetime")) === 1)
+df_join3 = df_join3.groupBy("day").count().withColumn("prev_val", lag(col("count"), 1, 0).over(Window.orderBy("day")))
+df_join3 = df_join3.withColumn("percent_change", round((col("count") - col("prev_val"))*100/col("prev_val"), 2)).orderBy(desc("percent_change")).select("day", "percent_change").limit(3)
+df_join3.show()
