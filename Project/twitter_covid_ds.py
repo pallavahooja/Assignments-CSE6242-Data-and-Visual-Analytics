@@ -10,7 +10,7 @@ import time
 # TODO: Enter your Bearer Token Here
 bearer_token = "AAAAAAAAAAAAAAAAAAAAAEfOIwEAAAAAzBbjeOoP4XpWEqydXtsOodfiCfk%3DXnDQNejU60wVcxAcJANbk6FosEQEm2yQPyXwuqhFa4pnHxrjkJ"
 # TODO: Change your path please
-path = 'D:\\Datasets\\COVID Tweets'
+path = 'D:\\Datasets\\COVID Temp'
 
 head = {'Authorization': f'Bearer {bearer_token}',
         'Content-type': 'application/json'}
