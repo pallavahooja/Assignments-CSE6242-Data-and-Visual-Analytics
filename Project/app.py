@@ -4,17 +4,15 @@ import dash_html_components as html
 import pandas as pd
 import plotly.express as px
 from pycountry_convert import country_alpha2_to_country_name, country_name_to_country_alpha2, country_name_to_country_alpha3
-import time
-import datetime
 from pycountry_convert.convert_country_alpha2_to_continent_code import COUNTRY_ALPHA2_TO_CONTINENT_CODE
 from dash.dependencies import Output, Input
 from pycountry_convert.country_wikipedia import WIKIPEDIA_COUNTRY_NAME_TO_COUNTRY_ALPHA2
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-text = "For {0}, map shows the countries with which it should open its " \
-       "air corridor basis the {1} Strictness Level of Policy. The map also shows the COVID Infection Rate for the countries from which the " \
-       "flights will operate"
+text = "For **{0}**, map shows the countries with which it should open its " \
+       "air corridor basis the **{1}** Strictness Level of Policy. The map also shows the COVID Infection Rate for the countries from which the " \
+       "flights will operate."
 
 def try_convert(country_name):
     try:
@@ -88,7 +86,7 @@ app.layout = html.Div([
             html.Div(id="policy-indicator", style = {'padding': '0px 10px 10px 10px'})
         ], className = "pretty_container four columns"),
         html.Div([
-            html.P(text.format("United States", "Low")),
+            html.P(dcc.Markdown(text.format("United States", "Lowest")), id="text"),
             html.P(),
             dcc.Graph(
                 id = 'world_map'
@@ -167,18 +165,13 @@ def policy_indicator(strictness):
     return elements, strictness_lbl[strictness], {'color': color[strictness]}
 
 @app.callback(
-    Output('world_map', 'figure'),
+    [Output('world_map', 'figure'), Output('text', 'children')],
     [Input('country-selector', 'value'), Input('strictness', 'value')])
 def update_graph(country_code, strictness):
-    print("*******")
     country = country_alpha2_to_country_name(country_code)
-    print(country)
-
     dest_lat = latlon.loc[latlon['name'] == country]['latitude'].iloc[0]
     dest_lon = latlon.loc[latlon['name'] == country]['longitude'].iloc[0]
-    print(flights_data.head())
     dest_flights = flights_data[flights_data['dest_airport_country'] == country]
-    print(dest_flights.head())
     fig = px.choropleth(dest_flights, locationmode = "ISO-3", locations = 'CC', color = 'flight_capacity', color_continuous_scale="blues", template = 'seaborn')
 
     for val in dest_flights.itertuples():
@@ -186,11 +179,16 @@ def update_graph(country_code, strictness):
         try:
             lat = latlon.loc[latlon['name'] == source]['latitude'].iloc[0]
             lon = latlon.loc[latlon['name'] == source]['longitude'].iloc[0]
-            fig = fig.add_scattergeo(lat = [lat, dest_lat], lon = [lon, dest_lon], line = dict(width = 1, color = 'black'),
+            fig = fig.add_scattergeo(lat = [lat, dest_lat], lon = [lon, dest_lon], line = dict(width = 1, color = '#1F1F1F'),
                                      mode = 'lines', showlegend = False)
         except:
             continue
-    return fig
+    strictness_level  = {
+        'low': "Lowest",
+        'med': "Moderate",
+        'high': "Highest"
+    }[strictness]
+    return fig, dcc.Markdown(text.format(country, strictness_level))
 
 if __name__ == '__main__':
     app.run_server(debug=True, port=7777)
